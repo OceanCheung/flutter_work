@@ -48,15 +48,15 @@ class _ProjectPageState extends State<ProjectPage> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: getAppBar(),
-            drawer: getDrawer(),
-            body: Container(
-              child: Center(
-                child: Text('项目'),
-              ),
-            )));
+    return Scaffold(
+      appBar: getAppBar(),
+      drawer: getDrawer(),
+      body: Container(
+        child: Center(
+          child: Text('项目'),
+        ),
+      ),
+    );
   }
 
   ///抽离出来的小部件AppBar

@@ -9,29 +9,45 @@ class ChartPage extends StatefulWidget {
 
 class _ChartPageState extends State<ChartPage> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              centerTitle: true,
-              title: Text('报表'),
-              bottom: TabBar(
-                tabs: <Widget>[
-                  Text(
-                    '统计报表',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Text(
-                    '统计图表',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ],
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        appBar: AppBar(
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          title: Text('报表'),
+          bottom: TabBar(
+            tabs: <Widget>[
+              Text(
+                '统计报表',
+                style: TextStyle(fontSize: 18),
               ),
-            ),
-            body: Container(
-              child: TabBarView(
-                children: <Widget>[Text('统计报表'), Text('统计图表')],
+              Text(
+                '统计图表',
+                style: TextStyle(fontSize: 18),
               ),
-            )));
+            ],
+          ),
+        ),
+        body: Container(
+          child: TabBarView(
+            children: <Widget>[Text('统计报表'), Text('统计图表')],
+          ),
+        ),
+      ),
+    );
   }
 }

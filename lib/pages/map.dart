@@ -24,6 +24,7 @@ class _MapPageState extends State<MapPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('地图'),
+        automaticallyImplyLeading: false,
       ),
     );
   }

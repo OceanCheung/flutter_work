@@ -20,11 +20,13 @@ class _HomePageState extends State<HomePage> {
   //当前页面
   StatefulWidget currentPage;
   //当前下标
-  int currentIndex = 0;
+  int currentIndex;
   //初始化
   @override
   void initState() {
     super.initState();
+    //初始化下标
+    currentIndex = 0;
     //初始化所有的界面
     pageList = <StatefulWidget>[
       ProjectPage(),
@@ -40,8 +42,6 @@ class _HomePageState extends State<HomePage> {
       BottomNavigationBarItem(icon: Icon(Icons.map), title: Text('地图')),
       BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('设置')),
     ];
-    //初始化当前下标
-    currentIndex = 0;
     //初始化当前页面
     currentPage = pageList[currentIndex];
   }
@@ -62,19 +62,21 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-        //此处表示无状态的底部tab栏
-        length: pageList.length, //tab栏的个数
-        child: Scaffold(
-          body: currentPage,
-          bottomNavigationBar: getBottomNavigationBar(),
-        ));
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      body: currentPage,
+      bottomNavigationBar: getBottomNavigationBar(),
+    );
   }
 
   //底部的tabbar
   Widget getBottomNavigationBar() {
     return Container(
-      decoration: BoxDecoration(color: Colors.blue),
+      // decoration: BoxDecoration(color: Colors.white),
       child: BottomNavigationBar(
         currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,

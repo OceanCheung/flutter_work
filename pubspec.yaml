@@ -44,7 +44,11 @@ flutter:
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
   assets:
-    - lib/assets/local/login/logo.png
+    - lib/assets/images/local/login/logo.png
+  fonts:
+    - family: CustomIcon
+      fonts:
+        - asset: lib/assets/fonts/CustomIcon.ttf #自定义图标
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see

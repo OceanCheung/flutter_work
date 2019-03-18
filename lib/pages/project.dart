@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './search.dart';
-import '../assets/network/net_image.dart';
+import '../assets/images/network/net_image.dart';
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import '../api/api.dart';

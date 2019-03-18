@@ -3,6 +3,7 @@ import '../pages/project.dart';
 import '../pages/chart.dart';
 import '../pages/map.dart';
 import '../pages/setting.dart';
+import '../pages/list.dart';
 
 ///主页面
 class HomePage extends StatefulWidget {
@@ -33,6 +34,7 @@ class _HomePageState extends State<HomePage> {
       ChartPage(),
       MapPage(),
       SettingPage(),
+      ListPage()
     ];
     //初始化底部导航栏
     bottomNavigationBarItemList = <BottomNavigationBarItem>[
@@ -41,6 +43,7 @@ class _HomePageState extends State<HomePage> {
           icon: Icon(Icons.insert_chart), title: Text('报表')),
       BottomNavigationBarItem(icon: Icon(Icons.map), title: Text('地图')),
       BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('设置')),
+      BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('列表'))
     ];
     //初始化当前页面
     currentPage = pageList[currentIndex];
@@ -67,7 +70,7 @@ class _HomePageState extends State<HomePage> {
         onPressed: () {},
         child: Icon(Icons.add),
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       body: currentPage,
       bottomNavigationBar: getBottomNavigationBar(),
     );

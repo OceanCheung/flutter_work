@@ -28,7 +28,6 @@ class _WebViewPageState extends State<WebViewPage> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     flutterWebviewPlugin.dispose();
   }

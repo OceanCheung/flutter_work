@@ -62,7 +62,7 @@ class _LoginPageState extends State<LoginPage> {
         children: <Widget>[
           Container(
             child: Image.asset(
-              "lib/assets/local/login/logo.png",
+              "lib/assets/images/local/login/logo.png",
               fit: BoxFit.cover,
               width: double.infinity,
               height: 240,

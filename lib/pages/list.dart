@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../config/custom_icon.dart';
+import './list/common_list.dart';
 
 class ListPage extends StatefulWidget {
   @override
@@ -17,11 +18,18 @@ class _ListPageState extends State<ListPage> {
           padding: EdgeInsets.all(30),
           children: <Widget>[
             ListTile(
-              title: Text('普通列表'),
+              title: Text('普通长列表'),
               leading: Icon(Icons.computer),
               trailing:
                   IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => CommonListPage(
+                              type: "1",
+                            )));
+              },
             ),
             Divider(),
             ListTile(

@@ -3,15 +3,16 @@ import 'package:flutter/material.dart';
 class CommonListPage extends StatefulWidget {
   //初始化参数
   CommonListPage({Key key, this.type}) : super(key: key);
-  String type;
+  final String type;
 
   @override
-  _CommonListPage createState() {
-    return _CommonListPage();
+  _CommonListPageState createState() {
+    return _CommonListPageState();
   }
 }
 
-class _CommonListPage extends State<CommonListPage> {
+class _CommonListPageState extends State<CommonListPage> {
+  //列表集合
   List<String> _list;
 
   Widget getListView() {
@@ -20,8 +21,14 @@ class _CommonListPage extends State<CommonListPage> {
       itemBuilder: (context, index) {
         return ListTile(
           title: Text(_list[index]),
-          leading: Icon(Icons.favorite),
-          trailing: Icon(Icons.check_box),
+          leading: Text((index + 1).toString()),
+          trailing: IconButton(
+            color: index % 2 == 1 ? Colors.red : Colors.grey,
+            icon: Icon(Icons.favorite),
+            onPressed: () {
+              setState(() {});
+            },
+          ),
         );
       },
     );

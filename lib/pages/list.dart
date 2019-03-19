@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import '../config/custom_icon.dart';
 import './list/common_list.dart';
+import './list/checkbox_list.dart';
+import './list/refresh_list.dart';
 
 class ListPage extends StatefulWidget {
   @override
@@ -37,12 +39,30 @@ class _ListPageState extends State<ListPage> {
               leading: Icon(Icons.check_box),
               trailing:
                   IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => CheckboxListPage()));
+              },
             ),
             Divider(),
             ListTile(
               title: Text('动态分页列表'),
               leading: Icon(CustomIcon.favorite),
+              trailing:
+                  IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (BuildContext context) => RefreshListPage()));
+              },
+            ),
+            Divider(),
+            ListTile(
+              title: Text('dataTable列表'),
+              leading: Icon(Icons.table_chart),
               trailing:
                   IconButton(onPressed: () {}, icon: Icon(Icons.arrow_forward)),
               onTap: () {},

@@ -4,6 +4,7 @@ import '../pages/chart.dart';
 import '../pages/map.dart';
 import '../pages/setting.dart';
 import '../pages/list.dart';
+import '../pages/common.dart';
 
 ///主页面
 class HomePage extends StatefulWidget {
@@ -34,6 +35,7 @@ class _HomePageState extends State<HomePage> {
       ChartPage(),
       MapPage(),
       SettingPage(),
+      CommonPage(),
       ListPage()
     ];
     //初始化底部导航栏
@@ -43,6 +45,7 @@ class _HomePageState extends State<HomePage> {
           icon: Icon(Icons.insert_chart), title: Text('报表')),
       BottomNavigationBarItem(icon: Icon(Icons.map), title: Text('地图')),
       BottomNavigationBarItem(icon: Icon(Icons.message), title: Text('设置')),
+      BottomNavigationBarItem(icon: Icon(Icons.widgets), title: Text('组件')),
       BottomNavigationBarItem(icon: Icon(Icons.list), title: Text('列表'))
     ];
     //初始化当前页面

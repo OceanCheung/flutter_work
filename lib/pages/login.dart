@@ -124,7 +124,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     onTap: () {
                       //进行验证
-                      if (_userName != null && _userName != "") {
+                      if (_userName.isNotEmpty) {
                         setState(() {
                           _userNameDisplay = true; //隐藏
                         });
@@ -136,7 +136,8 @@ class _LoginPageState extends State<LoginPage> {
                         });
                         return;
                       }
-                      if (_password != null && _userName != "") {
+                      //判空
+                      if (_password.isNotEmpty) {
                         print("密码");
                       } else {
                         showDialog(

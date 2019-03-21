@@ -27,6 +27,7 @@ dependencies:
   json_annotation: ^0.2.3 #json转成bean插件
   flutter_webview_plugin: ^0.3.0+2 #webview插件
   flutter_refresh: ^0.0.2 #下拉下拉列表插件
+  flutter_datetime_picker: ^1.1.4 #date选项插件
 
 dev_dependencies:
   flutter_test:

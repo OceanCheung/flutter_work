@@ -26,6 +26,7 @@ class _MapPageState extends State<MapPage> {
         title: Text('地图'),
         automaticallyImplyLeading: false,
       ),
+      body: Text('1'),
     );
   }
 }

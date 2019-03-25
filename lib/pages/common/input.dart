@@ -73,7 +73,7 @@ class _InputPageState extends State<InputPage> {
     );
   }
 
-  //选择时间 年月   这边使用的第三方
+  //选择时间   这边使用的第三方
   Widget getDatePicker() {
     return OutlineButton(
       child: Text('选择时间'),

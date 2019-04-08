@@ -19,7 +19,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -28,13 +27,13 @@ dependencies:
   flutter_webview_plugin: ^0.3.0+2 #webview插件
   flutter_refresh: ^0.0.2 #下拉下拉列表插件
   flutter_datetime_picker: ^1.1.4 #date选项插件
+  charts_flutter: ^0.6.0 #charts图表
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner: ^0.9.0 #json转成bean
   json_serializable: ^0.5.4 #json转成bean
-
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
 
@@ -47,6 +46,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/images/local/login/logo.png
+    - lib/assets/echart.html
   fonts:
     - family: CustomIcon
       fonts:

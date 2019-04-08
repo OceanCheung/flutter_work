@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './chart/simple.dart';
 
 class ChartPage extends StatefulWidget {
   @override
@@ -18,6 +19,7 @@ class _ChartPageState extends State<ChartPage> {
     super.dispose();
   }
 
+  List list = new List();
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -42,7 +44,7 @@ class _ChartPageState extends State<ChartPage> {
         ),
         body: Container(
           child: TabBarView(
-            children: <Widget>[Text('统计报表'), Text('统计图表')],
+            children: <Widget>[Text('统计报表')],
           ),
         ),
       ),

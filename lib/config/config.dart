@@ -1,3 +1,3 @@
 class Config {
-  static final String HOST = "http://localhost:9999";
+  static const String host = "http://192.168.1.121:8080/sys-mapping";
 }

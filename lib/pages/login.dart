@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './home.dart';
+import '../utils/http_util.dart';
+import '../api/test_api.dart';
 
 class LoginPage extends StatefulWidget {
   @override
@@ -122,7 +124,13 @@ class _LoginPageState extends State<LoginPage> {
                         style: TextStyle(color: Colors.white),
                       ),
                     ),
-                    onTap: () {
+                    onTap: () async {
+                      var data = await TestApi.listProduction();
+                      // var data =
+                      //     await HttpUtil().request('/baseInfo/listProduction');
+                      List list = data["data"];
+                      print(list);
+                      return;
                       //进行验证
                       if (_userName.isNotEmpty) {
                         setState(() {
@@ -158,6 +166,7 @@ class _LoginPageState extends State<LoginPage> {
                             });
                         return;
                       }
+
                       Navigator.push(
                           context,
                           MaterialPageRoute(

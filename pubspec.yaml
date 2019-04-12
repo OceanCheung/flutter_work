@@ -28,6 +28,7 @@ dependencies:
   flutter_refresh: ^0.0.2 #下拉下拉列表插件
   flutter_datetime_picker: ^1.1.4 #date选项插件
   charts_flutter: ^0.6.0 #charts图表
+  flutter_spinkit: ^3.1.0 #loading载入效果
 
 dev_dependencies:
   flutter_test:
@@ -46,7 +47,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - lib/assets/images/local/login/logo.png
-    - lib/assets/echart.html
   fonts:
     - family: CustomIcon
       fonts:

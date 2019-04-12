@@ -130,7 +130,6 @@ class _LoginPageState extends State<LoginPage> {
                       //     await HttpUtil().request('/baseInfo/listProduction');
                       List list = data["data"];
                       print(list);
-                      return;
                       //进行验证
                       if (_userName.isNotEmpty) {
                         setState(() {

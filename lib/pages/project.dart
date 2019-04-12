@@ -5,7 +5,6 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 import '../api/api.dart';
 import '../model/user.dart';
-import './webview.dart';
 
 class ProjectPage extends StatefulWidget {
   @override
@@ -133,7 +132,7 @@ class _ProjectPageState extends State<ProjectPage> {
             },
           ),
           ListTile(
-            title: Text('跳转到webview页面'),
+            title: Text('跳转到搜索页面'),
             contentPadding: EdgeInsets.all(5),
             leading: IconButton(
               icon: Icon(Icons.access_time),
@@ -144,7 +143,7 @@ class _ProjectPageState extends State<ProjectPage> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                      builder: (BuildContext context) => WebViewPage()));
+                      builder: (BuildContext context) => SearchPage()));
             },
           )
         ],

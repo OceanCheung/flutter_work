@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import './chart/simple.dart';
+import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class ChartPage extends StatefulWidget {
   @override
@@ -9,43 +10,45 @@ class ChartPage extends StatefulWidget {
 }
 
 class _ChartPageState extends State<ChartPage> {
+  final flutterWebviewPlugin = new FlutterWebviewPlugin();
+
   @override
   void initState() {
     super.initState();
+    flutterWebviewPlugin.onUrlChanged.listen((String url) {
+      // print(url);
+    });
+    flutterWebviewPlugin.onScrollYChanged.listen((double offsetY) {
+      // print('yyyyy');
+    });
+
+    flutterWebviewPlugin.onScrollXChanged.listen((double offsetX) {
+      // print('xxxxx');
+    });
   }
 
   @override
   void dispose() {
     super.dispose();
+    flutterWebviewPlugin.dispose();
   }
 
-  List list = new List();
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          automaticallyImplyLeading: false,
-          centerTitle: true,
-          title: Text('报表'),
-          bottom: TabBar(
-            tabs: <Widget>[
-              Text(
-                '统计报表',
-                style: TextStyle(fontSize: 18),
-              ),
-              Text(
-                '统计图表',
-                style: TextStyle(fontSize: 18),
-              ),
-            ],
-          ),
-        ),
-        body: Container(
-          child: TabBarView(
-            children: <Widget>[Text('统计报表')],
-          ),
+    return WebviewScaffold(
+      // url: "https://www.baidu.com/",
+      url: "http://192.168.1.225:8081/",
+      appBar: AppBar(
+        title: Text('图表'),
+        automaticallyImplyLeading: false,
+      ),
+      // withZoom: false,
+      // withLocalStorage: true,
+      // hidden: true,
+      initialChild: Container(
+        color: Colors.white,
+        child: Center(
+          child: Text('加载中.....'),
         ),
       ),
     );

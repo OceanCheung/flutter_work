@@ -37,7 +37,7 @@ class _ChartPageState extends State<ChartPage> {
   Widget build(BuildContext context) {
     return WebviewScaffold(
       // url: "https://www.baidu.com/",
-      url: "http://192.168.1.225:8081/",
+      url: "http://58.216.140.179:8183/chart/index.html",
       appBar: AppBar(
         title: Text('图表'),
         automaticallyImplyLeading: false,
